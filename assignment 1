@@ -1,0 +1,20 @@
+#include<stdio.h>
+main(){                         
+	int arr[]={1,2,3,4,5},ele;     
+	 int len=sizeof(arr)/sizeof(int);
+	 void binary(int arr[],int len,int ele);
+	int mid,sind=0,eind=len-1;
+	scanf("%d",&ele);
+	binary(arr,len,ele);
+}
+	void binary(int arr[],int len,int ele){
+		int mid,sind=0,eind=len-1;
+	while(sind<=eind){
+	mid=(sind+eind)/2;
+    if(arr[mid]==ele) 
+	printf("LOC=%d",mid);
+	if(arr[mid]>ele)
+	eind=mid-1; 
+	else
+	sind=mid+1;
+}}
